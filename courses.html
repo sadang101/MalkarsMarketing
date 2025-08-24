@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Courses - Malkars Marketing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">Malkars<span>Marketing</span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="register.html" class="btn btn-primary">Register Now</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Courses Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <h1>Find the Perfect Course</h1>
+            <p>Enhance your skills with our expert-led courses</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="courses-page">
+        <div class="container">
+            <!-- Search and Filter Bar -->
+            <div class="courses-toolbar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search courses...">
+                </div>
+                <div class="filters-container">
+                    <div class="filter-dropdown">
+                        <button class="filter-btn">
+                            <i class="fas fa-filter"></i>
+                            <span>Filter</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown-content">
+                            <div class="filter-group">
+                                <h4>Category</h4>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="marketing">
+                                    <span>Marketing</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="sales">
+                                    <span>Sales</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="business">
+                                    <span>Business</span>
+                                </label>
+                            </div>
+                            <div class="filter-group">
+                                <h4>Level</h4>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="level" value="beginner">
+                                    <span>Beginner</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="level" value="intermediate">
+                                    <span>Intermediate</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="level" value="advanced">
+                                    <span>Advanced</span>
+                                </label>
+                            </div>
+                            <div class="filter-actions">
+                                <button class="btn btn-outline" id="resetFilters">Reset</button>
+                                <button class="btn btn-primary" id="applyFilters">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="becomeCreatorBtn">
+                        <i class="fas fa-plus"></i> Become a Creator
+                    </button>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Courses will be dynamically loaded here -->
+            </div>
+
+            <!-- Loading More -->
+            <div class="load-more">
+                <button class="btn btn-outline" id="loadMore">Load More Courses</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Become Creator Modal -->
+    <div class="modal" id="creatorModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Become a Course Creator</h2>
+            <p>Share your expertise and earn money by creating and selling courses on our platform.</p>
+            <form id="creatorForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="expertise">Your Expertise</label>
+                    <input type="text" id="expertise" placeholder="e.g., Digital Marketing, Sales Strategy" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" min="0" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Malkars Marketing</h3>
+                    <p>Empowering professionals with industry-leading marketing education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@malkarsmarketing.com</p>
+                    <p>Phone: +91 XXXXXXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Malkars Marketing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/courses.js"></script>
+</body>
+</html>
